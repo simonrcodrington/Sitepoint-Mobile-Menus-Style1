@@ -1,0 +1,104 @@
+/*box sizing set*/
+*,
+*:before,
+*:after {
+  moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*clearfixes*/
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/*container for the whole website*/
+.web-container{
+  max-width: 500px;
+  position: relative;
+}
+
+/*main container for content*/
+.main-container{
+  z-index: 1;
+  position: relative;
+}
+
+/*container for the nav*/
+.nav-menu-wrap {
+  position: relative;
+  top: 0px;
+  height: auto;
+  width: 100%;
+}
+
+.menu {
+  margin: 0px;
+  padding: 0px;
+  height: auto;
+}
+
+.nav-menu {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+  border-left: solid 1px #ccc;
+  border-right: solid 1px #ccc;
+  height: 0px;
+  -webkit-transition: all 550ms ease-in;
+  -moz-transition: all 550ms ease-in;
+  -ms-transition: all 550ms ease-in;
+  -o-transition: all 550ms ease-in;
+  transition: all 550ms ease-in;
+}
+.nav-menu li {
+  list-style-type: none;
+  display: block;
+  background: transparent;
+  position: relative;
+}
+.nav-menu li > a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-top: solid 1px #ccc;
+  position: relative;
+  white-space: nowrap;
+  background: #eee;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -moz-transition: all 300ms ease;
+}
+.nav-menu li > a:hover {
+  background: #ccc;
+}
+
+.nav-menu > li:last-child{
+  border-bottom: solid 1px #ccc;
+}
+
+/*Nav menu toggle*/
+.nav-menu-toggle {
+  border: solid 1px #ddd;
+  background: #ccc;
+  height: 35px;
+  width: 35px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 15px;
+  z-index: 999;
+}
+.nav-menu-toggle .toggle {
+  color: #fff;
+  line-height: 35px;
+  font-size: 150%;
+}
